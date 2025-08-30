@@ -1,0 +1,52 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Frontend",
+      "type": "shell",
+      "command": "make",
+      "args": ["start-frontend"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Start Backend",
+      "type": "shell",
+      "command": "make",
+      "args": ["start-backend"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Start Both (Frontend + Backend)",
+      "dependsOrder": "parallel",
+      "dependsOn": ["Start Frontend", "Start Backend"]
+    },
+    {
+      "label": "Start Database",
+      "type": "shell",
+      "command": "make",
+      "args": ["start-db"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Kill All Processes",
+      "type": "shell",
+      "command": "make",
+      "args": ["kill-all"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Kill Backend",
+      "type": "shell",
+      "command": "make",
+      "args": ["kill-backend"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Kill Frontend",
+      "type": "shell",
+      "command": "make",
+      "args": ["kill-frontend"],
+      "problemMatcher": []
+    }
+  ]
+}
